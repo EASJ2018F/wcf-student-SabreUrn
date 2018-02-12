@@ -18,7 +18,7 @@ namespace StudentService {
         List<string> FindStudents(string name);
 
         [OperationContract]
-        List<string> GetAllStudents();
+        List<List<string>> GetAllStudents();
 
         [OperationContract]
         void RemoveStudent(string name);

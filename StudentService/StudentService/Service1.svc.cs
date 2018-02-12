@@ -31,8 +31,12 @@ namespace StudentService {
             return student;
         }
 
-        public List<string> GetAllStudents() {
-            throw new NotImplementedException();
+        public List<List<string>> GetAllStudents() {
+            List<List<string>> list = new List<List<string>>();
+            foreach(KeyValuePair<string, Student> kvp in _studentList) {
+                list.Add(FindStudents(kvp.Key));
+            }
+            return list;
         }
 
         public void RemoveStudent(string name) {
